@@ -1,0 +1,398 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>SplitSmart PDF | Color Separator</title>
+    <link rel="stylesheet" href="/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    
+    <!-- PAGE 1: Home -->
+    <div id="page1" class="page-view active">
+      <!-- Header -->
+      <header class="top-nav">
+        <div class="logo">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect width="24" height="24" rx="6" fill="#4f46e5"/>
+            <path d="M7 8h10M7 12h10M7 16h6" stroke="white" stroke-width="2" stroke-linecap="round"/>
+          </svg>
+          <span class="logo-text">SplitSmart <strong>PDF</strong></span>
+        </div>
+        <nav class="nav-links">
+          <a href="#">How it works</a>
+          <a href="#">Features</a>
+          <a href="#">Benefits</a>
+          <a href="#">Pricing</a>
+          <a href="#">FAQ</a>
+        </nav>
+      </header>
+
+      <!-- Hero -->
+      <section class="hero">
+        <div class="hero-content">
+          <div class="badge">
+            <span class="badge-icon">☀️</span> Save up to 80% on printing costs
+          </div>
+          <h1>Split your PDF into <br><span class="text-blue">Color</span> and <strong>Black & White</strong></h1>
+          <p class="hero-subtitle">
+            Smart detection to reduce printing costs.<br>Ignore colors and exclude regions you don't want in color.
+          </p>
+          
+          <div class="features-row">
+            <div class="feature-item">
+              <div class="f-icon blue-bg">🎨</div>
+              <div class="f-text"><strong>Detect Colors</strong><br>Automatically find<br>colored pages</div>
+            </div>
+            <div class="feature-item">
+              <div class="f-icon purple-bg">💧</div>
+              <div class="f-text"><strong>Ignore a Color</strong><br>Treat pages with only<br>that color as B&W</div>
+            </div>
+            <div class="feature-item">
+              <div class="f-icon outline-bg">⛶</div>
+              <div class="f-text"><strong>Exclude Regions</strong><br>Remove logos or areas<br>from color detection</div>
+            </div>
+          </div>
+
+          <div class="hero-actions">
+            <button id="goToPage2Btn" class="btn-primary">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M17 8l-5-5-5 5M12 3v12"/></svg> 
+              Upload PDF
+            </button>
+            <button class="btn-secondary">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polygon points="10 8 16 12 10 16 10 8"></polygon></svg> 
+              See how it works
+            </button>
+          </div>
+        </div>
+        
+        <div class="hero-graphic">
+           <div class="laptop-mockup">
+             <div class="laptop-screen">
+                <div class="screen-content">
+                  <h4>See it in action</h4>
+                  <p>A quick 45-second animation</p>
+                  
+                  <div class="mini-diagram">
+                    <div class="md-doc">PDF</div>
+                    <div class="md-arrows">
+                      <span>→</span>
+                      <span>→</span>
+                    </div>
+                    <div class="md-results">
+                      <div class="md-res color-res">Color Pages <div class="bdg pink">24</div></div>
+                      <div class="md-res bw-res">Black & White Pages <div class="bdg gray">76</div></div>
+                    </div>
+                  </div>
+                </div>
+             </div>
+             <div class="laptop-base"></div>
+           </div>
+        </div>
+      </section>
+
+      <!-- Why use section -->
+      <section class="why-use">
+        <h2>Why use <strong>SplitSmart PDF?</strong></h2>
+        <div class="features-grid-cards">
+          <div class="fc">
+            <div class="fc-icon green"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="1" x2="12" y2="23"></line><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path></svg></div>
+            <div class="fc-text">
+              <h4>Save Money</h4>
+              <p>Print black & white pages separately and save up to 80% on printing costs.</p>
+            </div>
+          </div>
+          <div class="fc">
+            <div class="fc-icon purple"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg></div>
+            <div class="fc-text">
+              <h4>Save Time</h4>
+              <p>No manual sorting. Automatic detection does the work for you.</p>
+            </div>
+          </div>
+          <div class="fc">
+            <div class="fc-icon blue"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><circle cx="12" cy="12" r="4"></circle><line x1="21.17" y1="8" x2="12" y2="8"></line><line x1="3.95" y1="6.06" x2="8.54" y2="14"></line><line x1="10.88" y1="21.94" x2="15.46" y2="14"></line></svg></div>
+            <div class="fc-text">
+              <h4>More Control</h4>
+              <p>Ignore colors and exclude regions for accurate results.</p>
+            </div>
+          </div>
+          <div class="fc">
+            <div class="fc-icon orange"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg></div>
+            <div class="fc-text">
+              <h4>Privacy First</h4>
+              <p>Your files are processed in your browser. Nothing is uploaded.</p>
+            </div>
+          </div>
+        </div>
+        <div class="security-note">
+          🔒 100% secure • Files never leave your browser
+        </div>
+      </section>
+    </div>
+
+    <!-- PAGE 2: Configure -->
+    <div id="page2" class="page-view" style="display:none;">
+      <header class="top-nav center-nav">
+        <div class="logo">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect width="24" height="24" rx="6" fill="#4f46e5"/>
+            <path d="M7 8h10M7 12h10M7 16h6" stroke="white" stroke-width="2" stroke-linecap="round"/>
+          </svg>
+          <span class="logo-text">SplitSmart <strong>PDF</strong></span>
+        </div>
+      </header>
+
+      <div class="wizard-container">
+        <div class="wizard-steps">
+          <div class="w-step active"><div class="ws-num">1</div> Upload</div>
+          <div class="ws-line"></div>
+          <div class="w-step active"><div class="ws-num">2</div> Configure</div>
+          <div class="ws-line"></div>
+          <div class="w-step"><div class="ws-num">3</div> Preview & Process</div>
+          <div class="ws-line"></div>
+          <div class="w-step"><div class="ws-num">4</div> Download</div>
+        </div>
+
+        <div class="step-card">
+          <div class="sc-header"><div class="circle-num">1</div> <h3>Upload your PDF</h3></div>
+          <p class="sc-desc">Your file stays in your browser. Nothing is uploaded.</p>
+          
+          <form id="uploadForm">
+            <input id="pdfInput" name="pdf" type="file" accept="application/pdf,.pdf" required style="display:none;">
+            
+            <label for="pdfInput" class="upload-dropzone" id="uploadPrompt">
+              <div class="cloud-icon">☁️</div>
+              <div class="dz-text">Drag & drop your PDF here</div>
+              <div class="dz-or">or</div>
+              <div class="btn-primary sm">Choose PDF</div>
+            </label>
+
+            <div id="fileSelectedCard" class="file-card" style="display:none;">
+              <div class="fc-icon">📄</div>
+              <div class="fc-info">
+                <div id="fileName" class="fc-name">Document.pdf</div>
+                <div class="fc-meta"><span id="fileSize"></span> • <span id="pageCountSpan"></span> pages</div>
+              </div>
+              <button type="button" id="removeFileBtn" class="fc-close">✕</button>
+            </div>
+          </form>
+        </div>
+
+        <div class="step-card">
+          <div class="sc-header"><div class="circle-num">2</div> <h3>Configure detection options</h3></div>
+          
+          <div class="config-section">
+            <div class="config-header">
+              <h4>Ignore a Color <span class="tag">Optional</span></h4>
+              <p>Pick colors from the PDF that should not trigger the 'Color' separation (e.g., logos).</p>
+            </div>
+            <div class="color-picker-ui">
+              <button type="button" id="eyedropperBtn" class="btn-secondary sm" style="margin-bottom:12px; display:none;">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14.5 2L19.5 7L7 19.5L2 22L4.5 17L14.5 2Z"/><path d="M12 4.5L17 9.5"/></svg>
+                Pick Color from PDF
+              </button>
+              <div id="pickedColors" class="color-swatches">
+                <span id="noColorsText" style="font-size:0.8rem; color:#9ca3af;">No colors ignored yet.</span>
+              </div>
+            </div>
+          </div>
+          
+          <div class="config-section divider-top">
+            <div class="config-header">
+              <h4>Exclude Region <span class="tag">Optional</span></h4>
+              <p>Select an area that will be ignored when detecting colors.</p>
+            </div>
+            
+            <div class="exclude-region-container">
+               <div id="pdfPreviewContainer" style="display:none;">
+                 <div class="canvas-wrapper">
+                   <div class="canvas-container" id="canvasWrapper">
+                     <canvas id="pdfCanvas"></canvas>
+                     <canvas id="selectionOverlay" style="position:absolute;top:0;left:0;width:100%;height:100%;pointer-events:auto;cursor:crosshair;"></canvas>
+                   </div>
+                   <div class="preview-controls">
+                     <button type="button" id="prevPageBtn">←</button>
+                     <span class="page-info">Page <span id="pageNum">1</span></span>
+                     <button type="button" id="nextPageBtn">→</button>
+                   </div>
+                 </div>
+                 <div class="er-side">
+                   <div class="er-instructions">
+                     <strong>Drag to select</strong><br>
+                     Logo, header, watermark, or any area you want to exclude.
+                   </div>
+                   <div class="mode-bar">
+                     <button type="button" id="modeSelectBtn" class="mode-btn active" style="display:none;">✂️ Select Exclude Region</button>
+                     <button type="button" id="clearRegionBtn" class="mode-btn danger" style="display:none">✕ Clear Region</button>
+                   </div>
+                 </div>
+               </div>
+               
+               <div id="noPdfMessage" class="no-pdf-msg">
+                 <div class="er-mockup">
+                    <div class="er-doc">
+                      <div class="lines"></div><div class="lines"></div>
+                    </div>
+                    <div class="er-doc">
+                      <div class="lines"></div><div class="lines"></div>
+                      <div class="selection-box"></div>
+                    </div>
+                    <div class="er-instructions">
+                       <strong>Drag to select</strong><br>
+                       Logo, header, watermark, or any area you want to exclude.
+                    </div>
+                 </div>
+                 <p class="mode-hint">Upload a PDF to draw an exclusion region.</p>
+               </div>
+            </div>
+            <p class="er-footer-note">ⓘ You can adjust or clear the selection anytime.</p>
+          </div>
+        </div>
+
+        <button id="processButton" type="button" class="btn-primary full-width" disabled>Continue to Preview →</button>
+      </div>
+    </div>
+
+    <!-- PAGE 3: Preview & Process -->
+    <div id="page3" class="page-view" style="display:none;">
+      <header class="top-nav center-nav">
+        <div class="logo">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect width="24" height="24" rx="6" fill="#4f46e5"/>
+            <path d="M7 8h10M7 12h10M7 16h6" stroke="white" stroke-width="2" stroke-linecap="round"/>
+          </svg>
+          <span class="logo-text">SplitSmart <strong>PDF</strong></span>
+        </div>
+      </header>
+
+      <div class="wizard-container wide">
+        <div class="wizard-steps">
+          <div class="w-step done"><div class="ws-num">1</div> Upload</div>
+          <div class="ws-line done"></div>
+          <div class="w-step done"><div class="ws-num">2</div> Configure</div>
+          <div class="ws-line done"></div>
+          <div class="w-step active"><div class="ws-num">3</div> Preview & Process</div>
+          <div class="ws-line active"></div>
+          <div class="w-step active"><div class="ws-num">4</div> Download</div>
+        </div>
+
+        <!-- Processing State -->
+        <div id="processingState" class="processing-state" style="display:none;">
+          <div class="spinner"></div>
+          <h3 id="status">Analyzing PDF...</h3>
+          <p>Please wait while we split your document into color and B&W streams.</p>
+        </div>
+
+        <!-- Results Section -->
+        <!-- Results Section -->
+        <section id="results" class="results-section" hidden>
+          <div class="results-container">
+            <!-- Original PDF Preview -->
+            <div class="result-box">
+              <div class="result-box-header">
+                <h3>Original PDF Preview</h3>
+                <span class="badge-gray" id="origPageCountBadge">100 pages</span>
+              </div>
+              <div class="thumbnails-grid" id="origThumbnails">
+                <div class="thumb-item"><div class="thumb color-thumb-1"></div><span class="thumb-page">1</span></div>
+                <div class="thumb-item"><div class="thumb color-thumb-2"></div><span class="thumb-page">2</span></div>
+                <div class="thumb-item"><div class="thumb bw-thumb-1"></div><span class="thumb-page">3</span></div>
+                <div class="thumb-item"><div class="thumb color-thumb-3"></div><span class="thumb-page">4</span></div>
+                <div class="thumb-item"><div class="thumb color-thumb-4"></div><span class="thumb-page">5</span></div>
+                <div class="thumb-more">...</div>
+              </div>
+            </div>
+
+            <!-- Processed PDF Preview -->
+            <div class="processed-container">
+              <h3>Processed PDF Preview</h3>
+              
+              <div class="processed-box color-box">
+                <div class="processed-header">
+                  <h4>Color Pages</h4>
+                  <span class="badge-pink" id="colorCount">24 pages</span>
+                </div>
+                <div class="thumbnails-grid" id="colorPages">
+                  <div class="thumb-item"><div class="thumb color-thumb-1"></div></div>
+                  <div class="thumb-item"><div class="thumb color-thumb-2"></div></div>
+                  <div class="thumb-item"><div class="thumb color-thumb-3"></div></div>
+                  <div class="thumb-item"><div class="thumb color-thumb-4"></div></div>
+                  <div class="thumb-more pink-more">...</div>
+                </div>
+              </div>
+
+              <div class="processed-box bw-box">
+                <div class="processed-header">
+                  <h4>Black & White Pages</h4>
+                  <span class="badge-gray" id="bwCount">76 pages</span>
+                </div>
+                <div class="thumbnails-grid" id="bwPages">
+                  <div class="thumb-item"><div class="thumb bw-thumb-1"></div></div>
+                  <div class="thumb-item"><div class="thumb bw-thumb-1"></div></div>
+                  <div class="thumb-item"><div class="thumb bw-thumb-1"></div></div>
+                  <div class="thumb-item"><div class="thumb bw-thumb-1"></div></div>
+                  <div class="thumb-more">...</div>
+                </div>
+              </div>
+
+              <div class="processed-footer">
+                <div class="footer-info">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12.01" y2="8"></line></svg>
+                  <span id="summaryText">24 pages in color • 76 pages in black & white</span>
+                </div>
+                <a href="#" class="view-details-link">View details</a>
+              </div>
+            </div>
+
+            <!-- Downloads -->
+            <div class="download-section">
+              <div class="download-header">
+                <h3>Ready to download</h3>
+                <p>Your optimized PDFs are ready!</p>
+              </div>
+              <div class="download-actions">
+                <a id="colorLink" class="btn-download color-dl" href="#" style="display:none;">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>
+                  <div class="dl-text">
+                    <strong>Download Color PDF</strong><br>
+                    <span class="dl-meta" id="colorDlMeta">24 pages</span>
+                  </div>
+                </a>
+                <a id="bwLink" class="btn-download bw-dl" href="#" style="display:none;">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>
+                  <div class="dl-text">
+                    <strong>Download Black & White PDF</strong><br>
+                    <span class="dl-meta" id="bwDlMeta">76 pages</span>
+                  </div>
+                </a>
+              </div>
+              <div class="download-footer-note">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#4f46e5" stroke-width="2"><path d="M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v11a2 2 0 0 1-2 2z"></path><polyline points="17 21 17 13 7 13 7 21"></polyline><polyline points="7 3 7 8 15 8"></polyline></svg>
+                <span>You can download them separately and print to save costs.</span>
+              </div>
+              <button id="startOverBtn" class="btn-secondary full-width" style="margin-top:20px;">Process Another File</button>
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
+
+    <!-- Preview Modal -->
+    <div id="previewModal" class="modal-overlay" style="display:none;">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h3 id="modalTitle">PDF Preview</h3>
+          <button type="button" id="closeModalBtn" class="fc-close">✕</button>
+        </div>
+        <div class="modal-body">
+          <iframe id="pdfIframe" src="" style="width:100%; height:600px; border:none;"></iframe>
+        </div>
+      </div>
+    </div>
+
+    <script src="/app.js" type="module"></script>
+  </body>
+</html>

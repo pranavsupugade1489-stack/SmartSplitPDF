@@ -1,0 +1,16 @@
+# Dependency Directories
+node_modules/
+
+# Uploads & Generated Files
+uploads/
+
+# Environment Variables & Secrets
+.env
+
+# Personal Test Files
+*.pdf
+*.png
+
+# OS Generated Files
+.DS_Store
+Thumbs.db

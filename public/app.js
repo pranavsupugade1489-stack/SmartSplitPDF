@@ -1281,13 +1281,19 @@ async function appendThumbnails(container, pageNumbers, startIndex, endIndex, in
     
     try {
       const page = await currentPdf.getPage(pageNum);
-      const viewport = page.getViewport({ scale: 0.3 });
+      const isMobile = window.matchMedia('(max-width: 768px)').matches;
+      const thumbScale = isMobile ? 0.15 : 0.3;
+      const viewport = page.getViewport({ scale: thumbScale });
       canvas.width = viewport.width;
       canvas.height = viewport.height;
       await page.render({ canvasContext: canvas.getContext('2d'), viewport }).promise;
+      page.cleanup(); // Free page memory immediately
     } catch (err) {
       console.error('Error rendering thumbnail for page ' + pageNum, err);
     }
+    
+    // Yield to browser between each page render to prevent main thread blocking
+    await new Promise(resolve => setTimeout(resolve, 0));
   }
 }
 

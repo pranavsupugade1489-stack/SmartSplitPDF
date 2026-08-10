@@ -10,6 +10,7 @@
 - **Automatic Color Detection** — Inspects every page's drawing commands (RGB, CMYK, image pixels) to classify it as color or black & white.
 - **Ignore a Color** — Pick specific colors (e.g., a logo tint) that should not trigger the "color" classification. Useful when a brand color appears on every page but you still want to print those pages in B&W.
 - **Exclude a Region** — Draw a rectangle over any area (header, logo, watermark) on the PDF preview; that region is skipped during color detection.
+- **Back to Back (BtoB) Printing** — Keeps front and back pages together for double-sided printing. If either side of a sheet contains color, both pages are routed to the color stream.
 - **Original Page Numbers Preserved** — Each output page is stamped with its original page number so you can match printed pages back to the source document.
 - **Temporary Server Processing** — Files are uploaded to the Node server for processing, the source upload is deleted after analysis, and generated downloads expire automatically.
 - **4-Step Wizard UI** — Clean, guided workflow: Upload → Configure → Preview & Process → Download.
@@ -130,7 +131,7 @@ Each copied page receives a stamped original page number at the bottom center.
 | Step | Description |
 |---|---|
 | **1 — Upload** | Drag & drop or browse to select a PDF (max 100 MB). |
-| **2 — Configure** | Optionally pick colors to ignore (eyedropper) and/or draw an exclusion region on the PDF preview. |
+| **2 — Configure** | Optionally pick colors to ignore (eyedropper), draw an exclusion region, or enable Back to Back (BtoB) printing. |
 | **3 — Preview & Process** | The server analyzes the document. A thumbnail grid shows original, color, and B&W pages. |
 | **4 — Download** | Download the Color PDF and/or the Black & White PDF separately. |
 

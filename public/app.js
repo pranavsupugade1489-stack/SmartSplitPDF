@@ -1032,6 +1032,10 @@ processButton.addEventListener('click', async () => {
   if (ignoreColors.length > 0) {
     body.append('ignoreColors', JSON.stringify(ignoreColors));
   }
+  const btobToggle = document.getElementById('btobToggle');
+  if (btobToggle && btobToggle.checked) {
+    body.append('btob', 'true');
+  }
 
   try {
     const response = await fetch('/api/process', {

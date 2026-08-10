@@ -50,10 +50,17 @@ const upload = multer({
 app.set('trust proxy', 1);
 app.use(enforceHttps);
 app.use(securityHeaders);
-app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.static(path.join(__dirname, 'public'), {
+  setHeaders: (res, filePath) => {
+    if (filePath.endsWith('.mjs')) res.setHeader('Content-Type', 'application/javascript');
+  }
+}));
 app.use('/vendor/pdfjs', express.static(path.join(__dirname, 'node_modules', 'pdfjs-dist', 'build'), {
   immutable: true,
-  maxAge: '1y'
+  maxAge: '1y',
+  setHeaders: (res, filePath) => {
+    if (filePath.endsWith('.mjs')) res.setHeader('Content-Type', 'application/javascript');
+  }
 }));
 
 app.get('/api/download/:jobId/:kind', async (req, res) => {
@@ -450,6 +457,7 @@ function createJob(jobId, req) {
     excludedRegion: parseExcludedRegion(req.body.excludeRegion),
     ignoreColors: parseIgnoreColors(req.body.ignoreColors),
     colorTolerance: clampNumber(Number(req.body.colorTolerance), 20, 80, 40),
+    isBackToBack: req.body.btob === 'true',
     status: 'queued',
     queuedAt: Date.now(),
     startedAt: null,
@@ -554,6 +562,19 @@ async function runJob(job) {
 async function processQueuedPdf(job) {
   const inputBytes = await fs.readFile(job.filePath);
   const pageColors = await classifyPdfPages(inputBytes, job.excludedRegion, job.ignoreColors, job.colorTolerance);
+  
+  if (job.isBackToBack) {
+    for (let i = 0; i < pageColors.length; i++) {
+      if (pageColors[i]) {
+        if (i % 2 === 0 && i + 1 < pageColors.length) {
+          pageColors[i + 1] = true;
+        } else if (i % 2 === 1) {
+          pageColors[i - 1] = true;
+        }
+      }
+    }
+  }
+
   const split = await createNumberedSplits(inputBytes, pageColors);
   const baseName = job.originalName;
   const jobDir = path.join(resultDir, job.jobId);
